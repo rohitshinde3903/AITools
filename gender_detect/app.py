@@ -49,15 +49,16 @@ def gemini_upload():
         prompt = (
             "Give me your **best guess** of the person's age and gender from this image. "
             "The age must be a blunt, precise 3-year range only (e.g., 20-23, 30-33 — nothing fuzzy like 'young adult'). "
-            "Gender must be either MALE or FEMALE. Be funny and direct, like Grok — no sugarcoating, just say it like it is. "
-            "Also, give me a single, relevant, and funny hashtag for the image. "
+            "Gender must be either MALE or FEMALE."
             "Format the result like:\n\n"
             "AGE: 20-23\n"
             "GENDER: MALE\n"
-            "MESSAGE: Looks like he just finished yelling at kids to get off his lawn.\n"
-            "HASHTAG: #OldManYellsAtCloud"
+            
         )
-
+#             "Also, give me a single, relevant, and funny hashtag for the image. "
+# "MESSAGE: Looks like he just finished yelling at kids to get off his lawn.\n"
+#              Be funny and direct, like Grok — no sugarcoating, just say it like it is. 
+#             "HASHTAG: #OldManYellsAtCloud"
         # Generate content using the prompt and the image
         response = model.generate_content([prompt, img])
         
